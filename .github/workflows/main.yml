@@ -8,8 +8,8 @@ on:
     - main
 jobs:
   test:
-    name: preparation of env.
-    runs-on: ubuntu-18.04
+    name: preparation of env. and running initial test
+    runs-on: ubuntu-latest
     
     steps:
     - uses: actions/setup-node@v2.5.2
