@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: johnfawzyreactsimpleproject 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: johnfawzyreactsimpleproject
+  template:
+    metadata:
+      labels:
+        app: johnfawzyreactsimpleproject 
+    spec:
+      containers:
+        - name: johnfawzyreactsimpleproject 
+          image: johnmfiskander.azurecr.io/johnfawzyreactsimpleproject
+          ports:
+          - containerPort: 4173
