@@ -20,6 +20,7 @@ variables:
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
+  demands: MaxConcurrency = 1
 
 
 stages:
