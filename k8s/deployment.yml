@@ -7,14 +7,31 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: react-app
+      app: react-app # Match with MARK C
   template:
     metadata:
       labels:
-        app: react-app
+        app: react-app # Match with MARK C
     spec:
       containers:
         - name: react-app-container
-          image: johnmfiskander/dockerized-react-app
+          image: johnmfiskander.azurecr.io/dockerized-react-app
           ports:
-            - containerPort: 80
+            - containerPort: 4173
+
+---
+
+# wordpress/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-app-service
+  namespace: react-app # Match with namespace
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 4173 # Port that publicly exposed to internet
+    targetPort: 4173 # Match with MARK C.1
+    protocol: TCP
+  selector:
+    app: react-app # Match with MARK C
