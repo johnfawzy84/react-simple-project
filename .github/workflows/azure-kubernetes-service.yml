@@ -37,7 +37,7 @@ on:
 env:
   AZURE_CONTAINER_REGISTRY: "johnmfiskander"
   CONTAINER_NAME: "dockerized-react-app"
-  RESOURCE_GROUP: "react-app"
+  RESOURCE_GROUP: "react-simple-app"
   CLUSTER_NAME: "react-simple-app-aks"
   DEPLOYMENT_MANIFEST_PATH: "k8s/deployment.yml"
 
