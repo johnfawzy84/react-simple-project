@@ -13,7 +13,7 @@ So this was the kind of tasks that I had in mind :
 - [x] add initial dummy test with vitest 
 - [x] create an inital Docker Container
 - [x] create an initial Github action that build and run the test. 
-- [ ] create a simple Calculator project in react website
-- [ ] update the unit-test to test the created components
+- [x] create a simple Calculator project in react website
+- [x] update the unit-test to test the created components
 - [ ] check deploying the website on GitHub pages or in Azure 
 - [ ] ?
